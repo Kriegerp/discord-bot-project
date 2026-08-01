@@ -1,0 +1,12 @@
+[Unit]
+Description=Discord Backend
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/mok/bot/backend.py
+WorkingDirectory=/home/mok/bot
+Restart=always
+User=mok
+
+[Install]
+WantedBy=multi-user.target

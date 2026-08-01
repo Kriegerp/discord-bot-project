@@ -1,0 +1,14 @@
+[Unit]
+Description=Macinator Discord Bot
+After=network.target
+
+[Service]
+Type=simple
+User=mok
+ExecStart=/usr/bin/python3 /home/mok/bot/startup.py
+WorkingDirectory=/home/mok/bot
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
